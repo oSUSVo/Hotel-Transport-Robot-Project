@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab1">
+      <attribute name="title">
+       <string>    DESK    </string>
+      </attribute>
+      <widget class="QLabel" name="botname_lb">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>310</y>
+         <width>38</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BOT1</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>230</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="date2_lb">
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>300</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>300</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>2000-01-01</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="time2_lb">
+          <property name="maximumSize">
+           <size>
+            <width>300</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>300</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>300</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>AM 00 : 00 : 00</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>290</y>
+         <width>390</width>
+         <height>112</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="stateimg_lb1">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/transport_12859042.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb2">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/dot.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb3">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/robot_arm1.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb4">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/dot.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb5">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/elevator.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb6">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/dot.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb7">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/room.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="stateimg_lb8">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>QTimage/bot.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb9">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb10">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb11">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb12">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb13">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="stateimg_lb14">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>72</x>
+         <y>200</y>
+         <width>391</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="rn_lb">
+          <property name="text">
+           <string>Room #</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="rn_le"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="start_pb">
+          <property name="text">
+           <string>● Check In</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="checkout_pb">
+          <property name="text">
+           <string>○ Check Out</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab2">
+      <attribute name="title">
+       <string>MANNUAL</string>
+      </attribute>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>86</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>BOT1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BOT2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BOT3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BOT4</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>10</y>
+         <width>161</width>
+         <height>58</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout6">
+          <item>
+           <widget class="QLabel" name="label2">
+            <property name="text">
+             <string>Voltage</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="pLNVolt">
+            <property name="digitCount">
+             <number>5</number>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Outline</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout5">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Percentage</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="pLNPercent">
+            <property name="digitCount">
+             <number>5</number>
+            </property>
+            <property name="segmentStyle">
+             <enum>QLCDNumber::Outline</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>333</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pPBHome">
+              <property name="text">
+               <string>HOME</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pPBLuggage">
+              <property name="text">
+               <string>Luggage</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="CBRoomnum">
+              <item>
+               <property name="text">
+                <string>201호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>202호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>203호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>301호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>302호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>303호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>401호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>402호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>403호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>501호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>502호</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>503호</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pPBRoom">
+              <property name="text">
+               <string>객실 이동</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="turn_pb">
+            <property name="text">
+             <string>◆ Return</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stop_pb">
+            <property name="text">
+             <string>■ STOP</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>10</y>
+         <width>41</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DB</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_camView">
+       <property name="geometry">
+        <rect>
+         <x>26</x>
+         <y>166</y>
+         <width>441</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CAM</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

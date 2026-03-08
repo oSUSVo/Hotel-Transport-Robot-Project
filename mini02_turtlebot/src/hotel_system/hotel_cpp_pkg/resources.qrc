@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>src/bot3_goal_qt/QTimage/bot.png</file>
+        <file>src/bot3_goal_qt/QTimage/dot.png</file>
+        <file>src/bot3_goal_qt/QTimage/elevator.png</file>
+        <file>src/bot3_goal_qt/QTimage/leftmovingbot.png</file>
+        <file>src/bot3_goal_qt/QTimage/transport_12859042.png</file>
+        <file>src/bot3_goal_qt/QTimage/rightmovingbot.png</file>
+        <file>src/bot3_goal_qt/QTimage/robot_arm1.png</file>
+        <file>src/bot3_goal_qt/QTimage/room.png</file>
+    </qresource>
+</RCC>

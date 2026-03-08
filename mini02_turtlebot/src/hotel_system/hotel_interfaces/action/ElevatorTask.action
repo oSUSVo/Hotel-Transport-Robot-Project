@@ -1,0 +1,12 @@
+# Goal
+string job_id
+int32 from_floor
+int32 to_floor
+string command   # "CALL" or "GO"
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string state     # "WAITING_DOOR", "MOVING", "ARRIVED"

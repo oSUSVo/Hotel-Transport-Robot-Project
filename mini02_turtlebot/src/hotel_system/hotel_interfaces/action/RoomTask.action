@@ -1,0 +1,12 @@
+# Goal
+string job_id
+string room_id   # e.g., "ROOM_201"
+string command   # "DELIVER", "WAIT"
+int32 wait_sec   # e.g., 30
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string state     # "KNOCK", "WAITING", "DONE"

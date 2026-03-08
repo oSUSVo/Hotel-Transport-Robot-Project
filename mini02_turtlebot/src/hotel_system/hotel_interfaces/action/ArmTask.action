@@ -1,0 +1,10 @@
+# Goal
+string job_id
+string command   # e.g., "LOAD_BAG", "UNLOAD_BAG"
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string state     # e.g., "MOVING", "GRASPING", "DONE"

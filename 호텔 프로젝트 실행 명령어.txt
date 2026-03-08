@@ -1,0 +1,82 @@
+# 호텔 프로젝트 실행 명령어
+
+## 공용
+source /opt/ros/humble/setup.bash
+source ~/{실행위치}/install/setup.bash   # 예시: 메인PC 워크스페이스
+export ROS_DOMAIN_ID=16                # 예시 (팀에서 쓰는 값으로 통일)
+
+## 터틀봇
+export TURTLEBOT3_MODEL=burger
+ros2 launch turtlebot3_bringup robot.launch.py
+
+- nav2
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=true map:=$HOME/test3_map.yaml
+
+-고정 좌표
+ros2 topic pub --once /initialpose geometry_msgs/msg/PoseWithCovarianceStamped "
+header:
+  frame_id: 'map'
+pose:
+  pose:
+    position: {x: 0.0, y: 0.0, z: 0.0}
+    orientation: {z: 0.0, w: 1.0}
+  covariance: [0.25, 0, 0, 0, 0, 0,
+               0, 0.25, 0, 0, 0, 0,
+               0, 0, 0.0, 0, 0, 0,
+               0, 0, 0, 0.0, 0, 0,
+               0, 0, 0, 0, 0.0, 0,
+               0, 0, 0, 0, 0, 0.068]
+"
+
+- 터틀봇 - 카메라
+ros2 run camera_ros camera_node --ros-args -p format:="RGB888" -p width:=640 -p height:=480
+- 영상 출력 변환
+ros2 run image_transport republish compressed raw --ros-args --remap in/compressed:=/camera/image_raw/compressed --remap out:=/image_raw
+
+# 카메라 영상 테스트
+ros2 run rqt_image_view rqt_image_view
+
+## 노드 서버
+- 디바이스
+ros2 launch hotel_device_servers device_servers.launch.py
+
+- 미션 노드
+ros2 launch tb3_hotel_mission hotel_mission.launch.py
+
+- QT 실행
+ros2 run hotel_cpp_pkg hotel_gui_node
+
+파이 - 엘베
+python3 raspi_elevator_agent.py
+
+파이 - room
+python3 room_buzzer_server.py
+
+로봇팔 // 학습이 진행되지 않아 확인이 어려움
+source /opt/ros/<jazzy_or_humble>/setup.bash
+ros2 launch open_manipulator_bringup omx_f.launch.py
+
+qt - ROOM_{방번호} 요청 방법 (확인용)
+ros2 service call /request_delivery hotel_interfaces/srv/RequestDelivery "{room_id: ROOM_201}"
+
+qt - 원하는 location 직접 이동 (확인용)
+ros2 service call /request_goto hotel_interfaces/srv/RequestGoTo "{target_id: ARM}"
+ros2 service call /request_goto hotel_interfaces/srv/RequestGoTo "{target_id: ELEVATOR_2F_FRONT}"
+ros2 service call /request_goto hotel_interfaces/srv/RequestGoTo "{target_id: ROOM_203}"
+
+# db 서버
+- db 통신 설정
+python3 mission_state_to_db.py
+
+db - 상태확인 (확인용)
+ros2 topic echo /mission_state
+
+# arm 서버
+- 로봇팔 기동
+ros2 launch open_manipulator_bringup omx_f.launch.py usb_port:=/dev/ttyACM0 baud_rate:=1000000
+
+- 통신 설정
+python3 tcp_server.py
+
+- 로봇팔 조종 코드
+python3 arm_agent.py
